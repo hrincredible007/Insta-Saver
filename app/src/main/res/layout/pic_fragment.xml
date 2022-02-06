@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#363636">
+
+    <LinearLayout
+        android:id="@+id/Linearlayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/getIGTVPic"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:hint="Enter the link here"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textColorHighlight="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="15sp">
+
+        </EditText>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/getPicButton"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+
+            android:background="@drawable/buttonbg"
+            android:text="Get Content "
+
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:layout_above="@id/DownloadButton3"
+        android:layout_below="@id/Linearlayout3">
+
+        <ImageView
+            android:id="@+id/particularPic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="5dp"
+            android:layout_margin="20dp"
+            android:foregroundGravity="center"/>
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/DownloadButton3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Download"
+        android:textColor="@color/white"
+        android:background="@drawable/buttonbg"
+        android:textSize="16dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+
+
+</RelativeLayout>

@@ -1,18 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#363636"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#F14668"
+        android:layout_marginTop="0dp" >
+        
+        <RelativeLayout
+            android:id="@+id/RelativeLayoutHeading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/InstaSaverHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Instagram Downloader"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+        
+        
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/TabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_below="@id/toolbar"
+        app:tabIndicatorColor="@color/white"
+        android:background="@drawable/bg"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="#363636"
+        app:tabIndicatorHeight="3.5dp"
+        app:tabMode="fixed">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/Photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Photo"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/Video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Video"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/Reel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Reel"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/IGTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="IGTV"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/PIC"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Pic"/>
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/TabLayout">
+
+    </androidx.viewpager.widget.ViewPager>
+
+
+
+</RelativeLayout>
